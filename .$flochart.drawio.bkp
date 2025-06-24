@@ -1,0 +1,43 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="Page-1" id="NCoRQ1SPWpMfgyG7BaxS">
+    <mxGraphModel dx="1106" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7VRKnyWv5zTI4xvbnFR_-1" value="Start" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7VRKnyWv5zTI4xvbnFR_-2" value="Initialize&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Create the frontier&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-stack for DFS&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-queue for BFS&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;-priority queue for A* with f(n) = CSF(n) + CTG(n)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Add the starting node to the frontier&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Create an empty set that visited nodes can be added to&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="200" y="40" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="7VRKnyWv5zTI4xvbnFR_-3" value="While&amp;nbsp;&lt;div&gt;Frontier is not empty&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="7VRKnyWv5zTI4xvbnFR_-5" value="Return Failure&lt;div&gt;No path found&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7VRKnyWv5zTI4xvbnFR_-7" value="Remove a node &lt;i&gt;n&lt;/i&gt;&amp;nbsp;from the frontier&lt;div&gt;-DFS: Pop from the end (stack behavior)&lt;/div&gt;&lt;div&gt;-BFS: Dequeue from the front (queue behavior)&lt;/div&gt;&lt;div&gt;-A*: Pop node with lowest value for&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;f(n) = CSF(n) + CTG(n)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="240" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="7VRKnyWv5zTI4xvbnFR_-9" value="If&amp;nbsp;&lt;div&gt;&lt;i&gt;n&lt;/i&gt;&amp;nbsp;is the treasure node&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="440" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="7VRKnyWv5zTI4xvbnFR_-10" value="Return Success&lt;div&gt;Treasure found&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="475" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7VRKnyWv5zTI4xvbnFR_-11" value="If &lt;i&gt;n&lt;/i&gt;&amp;nbsp;has not been visited" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="610" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="7VRKnyWv5zTI4xvbnFR_-12" value="Add &lt;i&gt;n&lt;/i&gt;&amp;nbsp;to the visited set" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="640" y="640" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="7VRKnyWv5zTI4xvbnFR_-13" value="For each valid neighbor &lt;i&gt;m&lt;/i&gt; of &lt;i&gt;n&lt;/i&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;If &lt;i&gt;m&lt;/i&gt;&amp;nbsp;has not been visited&amp;nbsp;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="800" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="7VRKnyWv5zTI4xvbnFR_-14" value="-Calculate cost (A* only)&lt;div&gt;-Add m to the frontier&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="480" y="880" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
