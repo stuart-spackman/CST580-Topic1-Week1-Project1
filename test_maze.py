@@ -1,4 +1,6 @@
 # test_maze.py
+# tests the functions of maze.py to confirm they are working properly
+
 from maze import generate_maze, get_neighbors, Node, reconstruct_path
 
 

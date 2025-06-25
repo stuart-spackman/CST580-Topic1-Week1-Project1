@@ -96,7 +96,7 @@ def a_star(maze, start_pos, treasure_pos):
         for neighbor_pos in get_neighbors(current_node.position, maze):
             if neighbor_pos not in visited:
                 cost_so_far = current_node.cost + 1  # CSF
-                cost_to_go = manhattan_distance(
+                cost_to_go = manhattan_distance(  # CTG
                     neighbor_pos, treasure_pos
                 )  # estimated CTG
                 f_cost = cost_so_far + cost_to_go  # total estimated cost

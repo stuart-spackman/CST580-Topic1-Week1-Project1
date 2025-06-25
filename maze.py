@@ -113,7 +113,7 @@ def reconstruct_path(end_node):
 
 class Node:
     """
-    Node class used by search algorithms to represetn states in the maze.
+    Node class used by search algorithms to represent states in the maze.
     Tracks position, parent (for path reconstruction), and optional cost.
     """
 
@@ -129,4 +129,5 @@ class Node:
         return hash(self.position)
 
     def __lt__(self, other):
+        # needed to prevent comparison errors in heapq
         return self.cost < other.cost
